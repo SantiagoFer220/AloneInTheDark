@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+
+
+public Transform MoveToLocation;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+
     }
 }
