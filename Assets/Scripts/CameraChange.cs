@@ -38,6 +38,7 @@ public class CameraChange : MonoBehaviour
 
 
     //Switching cameras
+    //MainCamera is the first camera that is used in the game. after this the camera system functios as follows. 
         for (int i = 0; i < triggerBools.Length; i++)
         {
             if (triggerBools[i] == true && other.gameObject.tag == ("pos" + i))
