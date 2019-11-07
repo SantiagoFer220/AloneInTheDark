@@ -9,7 +9,7 @@ public class Inventory : MonoBehaviour
     public Image[] itemImages = new Image[numItemSlots];
     public Item[] items = new Item[numItemSlots];
 
-    public void AddItem(Item itemToAdd) {
+     public void AddItem(Item itemToAdd) {
         for (int i = 0; i < items.Length; i++)
         {
             if (items[i] == null)
