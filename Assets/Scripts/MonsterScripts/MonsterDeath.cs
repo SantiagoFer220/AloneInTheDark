@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterController : MonoBehaviour
+public class MonsterDeath : MonoBehaviour
 {
-    public float movespeed;
-
+    public GameObject player;
     private float maxdist = 100f;
+   
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.Find("Player");
     }
 
     // Update is called once per frame
@@ -23,9 +23,6 @@ public class MonsterController : MonoBehaviour
         {
             Debug.Log("hit!");
         }
-        else
-        {
-            this.transform.Translate(0, 0, movespeed * Time.deltaTime);
-        }
+
     }
 }
