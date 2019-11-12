@@ -14,9 +14,9 @@ public KeyCode RotateLeft;
 
 
     // //////////INVENTORY CRAP
-    public GameObject inventoryObject;
-    public Inventory myInventory;
-    public Item myItem;
+ //   public GameObject inventoryObject;
+  //  public Inventory myInventory;
+  //  public Item myItem;
 
 
 
@@ -24,7 +24,7 @@ public KeyCode RotateLeft;
     // Start is called before the first frame update
     void Start()
     {
-        myInventory = inventoryObject.GetComponent<Inventory>();
+       // myInventory = inventoryObject.GetComponent<Inventory>();
     }
 
     // Update is called once per frame
@@ -51,7 +51,7 @@ public KeyCode RotateLeft;
         //////////////////INVENTORY CRAP
         if (Input.GetKey(KeyCode.Space)) {
             Debug.Log("space pressed to initiate interface");
-            myInventory.AddItem(myItem);
+           // myInventory.AddItem(myItem);
         }
 
     }
