@@ -663,11 +663,9 @@ GameObject:
   - component: {fileID: 1227871571}
   m_Layer: 0
   m_Name: Player
-<<<<<<< HEAD
-  m_TagString: Untagged
-=======
+
   m_TagString: Player
->>>>>>> GabiBranch
+
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
