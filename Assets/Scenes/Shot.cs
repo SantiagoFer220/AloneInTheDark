@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//This script deals with the different camera attributes we can change for every camera
+//This script is attached to the different Camera position objects. It sets the cameras future location and framing. It sets up the "Shots"
 public class Shot: MonoBehaviour
 {
 
