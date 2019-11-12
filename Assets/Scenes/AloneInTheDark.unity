@@ -1135,7 +1135,7 @@ GameObject:
   - component: {fileID: 1684749944}
   - component: {fileID: 1684749943}
   m_Layer: 0
-  m_Name: Monster
+  m_Name: MonsterManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1153,7 +1153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fcb85da939a1423fad30d941895a253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterprefab: {fileID: 5001834835083624171, guid: 20693996c96e9451ab220ee4038fa68a,
+  monsterprefab: {fileID: 7529943817092014757, guid: 87b25511da4224c7ea436ffe23261ebe,
     type: 3}
   monsterhere: {fileID: 0}
   timeleft: 30
