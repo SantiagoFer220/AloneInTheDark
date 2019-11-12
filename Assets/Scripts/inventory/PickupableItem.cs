@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 //!!!!the tag of the thing picking up the object has to be "hand"
@@ -9,8 +10,10 @@ using UnityEngine;
 
 public class PickupableItem : MonoBehaviour
 {
+    public GameObject inventoryObject;
+    public Inventory myInven;
     public bool touchedOrNot = false;
-
+    public Text text;
     public GameObject parentPlayer;
 
     public bool beingPickedUp = false;
@@ -38,6 +41,8 @@ public class PickupableItem : MonoBehaviour
                 // myRB.isKinematic = false;
                 beingPickedUp = true;
                 myRB.isKinematic = true;
+
+                //myInven.AddItem()
             }
 
 
@@ -48,6 +53,7 @@ public class PickupableItem : MonoBehaviour
     void Start()
     {
         // this.transform.parent = parentPlayer.transform;
+        myInven = inventoryObject.GetComponent<Inventory>();
     }
 
 
