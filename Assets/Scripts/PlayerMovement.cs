@@ -53,6 +53,11 @@ public KeyCode RotateLeft;
             Debug.Log("space pressed to initiate interface");
            // myInventory.AddItem(myItem);
         }
+        if (Input.GetKey(KeyCode.B))
+        {
+            Debug.Log("space pressed to initiate interface");
+            myInventory.RemoveItem(myItem);
+        }
 
     }
 }

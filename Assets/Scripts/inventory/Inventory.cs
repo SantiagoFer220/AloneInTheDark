@@ -8,20 +8,27 @@ public class Inventory : MonoBehaviour
     public const int numItemSlots = 4;
     public Image[] itemImages = new Image[numItemSlots];
     public Item[] items = new Item[numItemSlots];
-
-     public void AddItem(Item itemToAdd) {
+    public bool added = false;
+    public void AddItem(Item itemToAdd) {
+        
         for (int i = 0; i < items.Length; i++)
         {
-            if (items[i] == null)
+            if (added == false)
             {
-                items[i] = itemToAdd;
-                itemImages[i].sprite = itemToAdd.sprite;
-                itemImages[i].enabled = true;
-                return;
+                if (items[i] == null && added==false)
+                {
+                    items[i] = itemToAdd;
+                    itemImages[i].sprite = itemToAdd.sprite;
+                    itemImages[i].enabled = true;
+                    added = true;
+                    return;
 
 
+                }
             }
+            added = false;
         }
+        
 
     }
 
@@ -30,7 +37,7 @@ public class Inventory : MonoBehaviour
             if (items[i] == itemToRemove) {
                 items[i] = null;
                 itemImages[i].sprite = null;
-                itemImages[i].enabled = false;
+              //  itemImages[i].enabled = false;
                 return;
 
 
