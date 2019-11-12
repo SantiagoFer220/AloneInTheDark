@@ -663,7 +663,11 @@ GameObject:
   - component: {fileID: 1227871571}
   m_Layer: 0
   m_Name: Player
+<<<<<<< HEAD
   m_TagString: Untagged
+=======
+  m_TagString: Player
+>>>>>>> GabiBranch
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1153,7 +1157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4fcb85da939a1423fad30d941895a253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  monsterprefab: {fileID: 7529943817092014757, guid: 87b25511da4224c7ea436ffe23261ebe,
+  monsterprefab: {fileID: 7916973698627189817, guid: f8ef00e8eac0b4a2fa475b30d56b279f,
     type: 3}
   monsterhere: {fileID: 0}
   timeleft: 30
