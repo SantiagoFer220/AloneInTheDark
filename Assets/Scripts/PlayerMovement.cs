@@ -56,7 +56,7 @@ public KeyCode RotateLeft;
         if (Input.GetKey(KeyCode.B))
         {
             Debug.Log("space pressed to initiate interface");
-            myInventory.RemoveItem(myItem);
+         //   myInventory.RemoveItem(myItem);
         }
 
     }
