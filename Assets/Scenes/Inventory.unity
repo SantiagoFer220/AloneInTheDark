@@ -941,6 +941,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  added: 0
 --- !u!1 &1834078701
 GameObject:
   m_ObjectHideFlags: 0
@@ -1314,6 +1315,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6489407908642865304, guid: 1b5201b598999ec4ea956bcab8d45fc8,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1b5201b598999ec4ea956bcab8d45fc8, type: 3}
