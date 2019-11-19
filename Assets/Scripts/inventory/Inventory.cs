@@ -5,19 +5,55 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+    public int current = 0;
+    public int actionNum = 0;
     public static int numOfCurrentSlot = 0;
-    public const int numItemSlots = 4;
+    public const int numItemSlots = 5;
     public Image[] itemImages = new Image[numItemSlots];
+    public Image[] BackgroundImages = new Image[numItemSlots];
     public Item[] items = new Item[numItemSlots];
+    public Text[] text = new Text[numItemSlots];
+    //public Image select = new Image();
+
     public bool added = false;
+
+
+    void Update() {
+        for (int i=0;i<items.Length;i++) {
+            if (current >= numItemSlots) {
+                current = 0;
+            }
+
+            if (current == i)
+            {
+                BackgroundImages[i].color = Color.blue;
+                if (items[i] != null)
+                {
+                    itemImages[i].enabled = true;
+                }
+
+            }
+            else {
+                BackgroundImages[i].color = Color.black;
+                itemImages[i].enabled = false;
+            }
+
+
+        }
+    }
     public void AddItem(Item itemToAdd) {
         for (int i = 0; i < items.Length; i++)
         {
             if (items[i] == null)
             {
+
                 items[i] = itemToAdd;
                 itemImages[i].sprite = itemToAdd.sprite;
-                itemImages[i].enabled = true;
+               // itemImages[i].enabled = true;
+                text[i].text = "aaaa";
+                text[i].enabled = true;
+
+
                 return;
             }
         }
@@ -57,7 +93,10 @@ public class Inventory : MonoBehaviour
             if (items[i] == itemToRemove) {
                 items[i] = null;
                 itemImages[i].sprite = null;
-              //  itemImages[i].enabled = false;
+                itemImages[i].enabled = false;
+                text[i].text = "";
+                text[i].enabled = false;
+                //  itemImages[i].enabled = false;
                 return;
 
 
