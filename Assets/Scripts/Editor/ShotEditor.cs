@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-
+// creates the in editor elements to contol the shots.
 [CustomEditor (typeof (Shot))]
 public class ShotEditor : Editor
 {

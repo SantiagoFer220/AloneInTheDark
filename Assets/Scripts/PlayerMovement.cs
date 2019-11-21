@@ -28,6 +28,7 @@ public KeyCode RotateLeft;
     }
 
     // Update is called once per frame
+    // this sets the movement to different keys set in the inspector. 
     void Update()
     {
         if (Input.GetKey(Forward)){

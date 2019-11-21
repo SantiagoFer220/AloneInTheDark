@@ -9,7 +9,7 @@ public class HealthSystem : MonoBehaviour
     public int healthMax;
     public bool isdead;
     public bool letplay;
-    
+
 
     public HealthSystem(int healthMax)
     {
@@ -24,7 +24,7 @@ public class HealthSystem : MonoBehaviour
 
     public float GetHealthPercent()
     {
-        return health/healthMax;
+        return health / healthMax;
     }
 
     public void Damage(int DamageAmount)
@@ -59,6 +59,7 @@ public class HealthSystem : MonoBehaviour
 
         
     }
-    
-   
+ */
+
+    }
 }
