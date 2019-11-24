@@ -5,7 +5,7 @@ using UnityEngine;
 //It sets the cameras future location and framing. It sets up the "Shots"
 public class Shot: MonoBehaviour
 {
-
+    //sets the focal point of the camera
     public Vector3 focalPoint;
 
     // Start is called before the first frame update
@@ -20,6 +20,8 @@ public class Shot: MonoBehaviour
         
     }
     //this transforms the camera to the right position and focal point
+
+    //this makes the camera move to the position of the shot taking its transform and rotation. 
     public void CutToShot()
     {
         transform.LookAt(focalPoint);
@@ -36,6 +38,7 @@ public class Shot: MonoBehaviour
         }
     }
 
+    //makes the lines that show where the cameras are pointing
     void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
