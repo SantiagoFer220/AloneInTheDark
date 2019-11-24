@@ -5,26 +5,38 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+    public GameObject playerMovementObject;
+    public PlayerMovement mypm;
     public int current = 0;
-    public int actionNum = 0;
+    public int currentAction = 0;
     public static int numOfCurrentSlot = 0;
     public const int numItemSlots = 5;
     public Image[] itemImages = new Image[numItemSlots];
     public Image[] BackgroundImages = new Image[numItemSlots];
+    public Image[] itemBackgroundImages = new Image[numItemSlots];
+    public Text[,] actionTexts = new Text[numItemSlots,2];
     public Item[] items = new Item[numItemSlots];
     public Text[] text = new Text[numItemSlots];
     //public Image select = new Image();
 
     public bool added = false;
 
+    void Start() {
+        mypm = playerMovementObject.GetComponent<PlayerMovement>();
+    }
 
     void Update() {
         for (int i=0;i<items.Length;i++) {
             if (current >= numItemSlots) {
                 current = 0;
             }
+            if (currentAction >= numItemSlots)
+            {
+                currentAction = 0;
+            }
 
-            if (current == i)
+            ///////////control selecting items background colors
+            if (current == i && !mypm.isSelectingActions)
             {
                 BackgroundImages[i].color = Color.blue;
                 if (items[i] != null)
@@ -36,6 +48,23 @@ public class Inventory : MonoBehaviour
             else {
                 BackgroundImages[i].color = Color.black;
                 itemImages[i].enabled = false;
+            }
+
+
+            ///////////control selecting actions background colors
+            if (currentAction == i && mypm.isSelectingActions)
+            {
+                itemBackgroundImages[i].color = Color.blue;
+                itemBackgroundImages[i].enabled = true;
+
+        
+
+            }
+            else
+            {
+                itemBackgroundImages[i].color = Color.black;
+                itemBackgroundImages[i].enabled = false;
+         
             }
 
 
