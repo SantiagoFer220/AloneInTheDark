@@ -12,9 +12,9 @@ public KeyCode Backward;
 public KeyCode RotateRight;
 public KeyCode RotateLeft;
 
-
+    /////////////INVENTORY CRAP
     // //////////INVENTORY CRAP
-  public GameObject inventoryObject;
+    public GameObject inventoryObject;
   public Inventory myInventory;
    public Item myItem;
     public Item anohterItem;
@@ -31,6 +31,7 @@ public KeyCode RotateLeft;
     }
 
     // Update is called once per frame
+    // this sets the movement to different keys set in the inspector. 
     void Update()
     {
         if ( !inventoryObject.activeSelf)//if inventory is NOT enabled
@@ -53,29 +54,40 @@ public KeyCode RotateLeft;
         }
 
 
-
         //////////////////INVENTORY CRAP
-        ///
-        //Add object
-        if (Input.GetKeyDown(KeyCode.B)) {
-            Debug.Log("space pressed to initiate interface");
-            myInventory.AddItem(myItem);
-        }
-        if (Input.GetKeyDown(KeyCode.V))
+        //////////////////INVENTORY CRAP
+        //////////////////INVENTORY CRAP
+        //////////////////INVENTORY CRAP
+        //////////////////INVENTORY CRAP
+        if (inventoryObject.activeSelf)
         {
-            Debug.Log("space pressed to initiate interface");
-            myInventory.AddItem(anohterItem);
-        }
-        //delete object
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            Debug.Log("222space pressed to initiate interface");
-           myInventory.RemoveItem(myItem);
-        }
-        if (Input.GetKeyDown(KeyCode.X))
-        {
-            Debug.Log("222space pressed to initiate interface");
-            myInventory.RemoveItem(anohterItem);
+
+
+            //////////////////INVENTORY CRAP
+            ///
+            //Add object
+            if (Input.GetKeyDown(KeyCode.B))
+            {
+                Debug.Log("space pressed to initiate interface");
+                myInventory.AddItem(myItem);
+            }
+            if (Input.GetKeyDown(KeyCode.V))
+            {
+                Debug.Log("space pressed to initiate interface");
+                myInventory.AddItem(anohterItem);
+            }
+            //delete object
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                Debug.Log("222space pressed to initiate interface");
+                myInventory.RemoveItem(myItem);
+            }
+            if (Input.GetKeyDown(KeyCode.X))
+            {
+                Debug.Log("222space pressed to initiate interface");
+                myInventory.RemoveItem(anohterItem);
+            }
+
         }
 
         //Close and Open Inventory window 
@@ -87,7 +99,7 @@ public KeyCode RotateLeft;
 
         //selecting items
         if (inventoryObject.activeSelf && isSelectingActions==false) {
-            if (Input.GetKeyDown(KeyCode.N))
+            if (Input.GetKeyDown(KeyCode.S))
             {
                 myInventory.current++;
             }
@@ -97,7 +109,7 @@ public KeyCode RotateLeft;
         //selecting actions on a certain item
         if (inventoryObject.activeSelf && isSelectingActions == true)
         {
-            if (Input.GetKeyDown(KeyCode.N))
+            if (Input.GetKeyDown(KeyCode.S))
             {
             
                 myInventory.currentAction++;
@@ -105,7 +117,7 @@ public KeyCode RotateLeft;
 
         }
 
-        if (inventoryObject.activeSelf && Input.GetKeyDown(KeyCode.A)) {
+        if (inventoryObject.activeSelf && Input.GetKeyDown(KeyCode.Return)) {
             isSelectingActions = !isSelectingActions;
 
         }
