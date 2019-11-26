@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class MonsterDetect: MonoBehaviour
 {
-    public GameObject player;
+    public GameObject wall;
     private float maxdist = 100f;
    
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.Find("Player");
+       // player = GameObject.Find("Player");
+       wall = GameObject.FindWithTag("wall");
     }
 
     // Update is called once per frame
@@ -21,7 +22,10 @@ public class MonsterDetect: MonoBehaviour
 
         if (Physics.Raycast(myRay, maxdist))
         {
-            Debug.Log("hit!");
+                this.transform.Rotate (0,-90f,0);
+            } else {
+                //turn right
+                this.transform.Rotate (0,90f,0);
         }
 
     }
