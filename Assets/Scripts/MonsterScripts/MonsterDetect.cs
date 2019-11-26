@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterDeath : MonoBehaviour
+public class MonsterDetect: MonoBehaviour
 {
     public GameObject player;
     private float maxdist = 100f;
