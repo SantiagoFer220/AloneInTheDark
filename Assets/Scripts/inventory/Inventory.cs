@@ -79,7 +79,7 @@ public class Inventory : MonoBehaviour
                 items[i] = itemToAdd;
                 itemImages[i].sprite = itemToAdd.sprite;
                // itemImages[i].enabled = true;
-                text[i].text = "aaaa";
+                text[i].text = "key or something";
                 text[i].enabled = true;
 
 

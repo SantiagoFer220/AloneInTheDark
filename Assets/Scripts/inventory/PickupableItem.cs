@@ -20,7 +20,7 @@ public class PickupableItem : MonoBehaviour
 
     // public beingHeld=false;
 
-    Rigidbody myRB;
+    //Rigidbody myRB;
 
 
     //the following script pick up items
@@ -28,19 +28,20 @@ public class PickupableItem : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
 
-        if (Input.GetKey(KeyCode.Space) && other.CompareTag("hand"))
+        if (Input.GetKey(KeyCode.P) && other.CompareTag("hand"))
         {
             Debug.Log("touched");
             if (true)
             {
-                myRB = this.GetComponent<Rigidbody>();
+             //   myRB = this.GetComponent<Rigidbody>();
                 // touchedOrNot = true;
                 // Destroy(this.gameObject);
-                this.transform.parent = parentPlayer.transform;
+              //  this.transform.parent = parentPlayer.transform;
                 //this.transform.position = parentPlayer.transform.position;
                 // myRB.isKinematic = false;
                 beingPickedUp = true;
-                myRB.isKinematic = true;
+               // myInven.AddItem(this);
+              //  myRB.isKinematic = true;
 
                 //myInven.AddItem()
             }
@@ -63,9 +64,9 @@ public class PickupableItem : MonoBehaviour
         //the following thing DROP the item
         if (beingPickedUp == true && Input.GetKey(KeyCode.B))
         {
-            myRB = this.GetComponent<Rigidbody>();
-            myRB.isKinematic = false;
-            this.transform.parent = null;
+         //   myRB = this.GetComponent<Rigidbody>();
+          //  myRB.isKinematic = false;
+          //  this.transform.parent = null;
             beingPickedUp = false;
             // 
 
