@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterDeath : MonoBehaviour
+public class MonsterDetect : MonoBehaviour
 {
     public GameObject wall;
     private float maxdist = 100f;
-   
+
     // Start is called before the first frame update
     void Start()
     {
-       // player = GameObject.Find("Player");
-       wall = GameObject.FindWithTag("wall");
+        // player = GameObject.Find("Player");
+        wall = GameObject.FindWithTag("wall");
     }
 
     // Update is called once per frame
@@ -21,12 +21,12 @@ public class MonsterDeath : MonoBehaviour
         Debug.DrawRay(this.transform.position, this.transform.forward, Color.red, maxdist);
 
         if (Physics.Raycast(myRay, maxdist))
+           // Debug.Log("hit!");
         {
-                this.transform.Rotate (0,-90f,0);
-            } else {
-                //turn right
-                this.transform.Rotate (0,90f,0);
+            this.transform.Rotate(0, -90f, 0);
+        } else {
+            //turn right
+            this.transform.Rotate(0, 90f, 0);
         }
-
     }
 }
