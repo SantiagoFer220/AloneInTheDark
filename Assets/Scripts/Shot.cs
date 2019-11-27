@@ -7,6 +7,7 @@ public class Shot: MonoBehaviour
 {
     //sets the focal point of the camera
     public Vector3 focalPoint;
+    public float FOV = 55f; 
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,8 @@ public class Shot: MonoBehaviour
         transform.LookAt(focalPoint);
         Camera.main.transform.localPosition = transform.localPosition;
         Camera.main.transform.localRotation = transform.localRotation;
+
+        Camera.main.fieldOfView = FOV; 
     }
 
     //switches cameras while in edit mode for easier setup

@@ -463,6 +463,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: 0.90511274, y: -0.38865948, z: 17.17331}
+  FOV: 55
 --- !u!1 &90657795
 GameObject:
   m_ObjectHideFlags: 0
@@ -831,6 +832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: -4.9690113, y: -1.1085877, z: 0}
+  FOV: 55
 --- !u!1 &182076948
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,6 +970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: -2.1459289, y: 0.0022878647, z: 12.377566}
+  FOV: 55
 --- !u!1 &208282708
 GameObject:
   m_ObjectHideFlags: 0
@@ -1361,6 +1364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: 2.484933, y: -0.23032618, z: 0}
+  FOV: 55
 --- !u!1 &308910612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,6 +1409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: 18.222923, y: -0.17816818, z: 25.513494}
+  FOV: 55
 --- !u!1 &322941448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1507,6 +1512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: -6.0015655, y: 0.42027855, z: -1.6953568}
+  FOV: 55
 --- !u!1 &336238212
 GameObject:
   m_ObjectHideFlags: 0
@@ -1783,6 +1789,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: 6.705695, y: -0.5384655, z: 2.079978}
+  FOV: 55
 --- !u!1 &488072427
 GameObject:
   m_ObjectHideFlags: 0
@@ -1808,14 +1815,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488072427}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -29.97, y: 1.1, z: 2.04}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: -0.010210007, z: 0, w: 0.9999479}
+  m_LocalPosition: {x: -7.99, y: 0.57, z: -3.958}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 1528558567}
   m_Father: {fileID: 268786936}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -1.17, z: 0}
 --- !u!114 &488072429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1838,11 +1845,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488072427}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
+  m_IsTrigger: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 2.57, y: 3.4607573, z: 3.01}
-  m_Center: {x: -0.95, y: 1.21, z: 2.92}
+  m_Center: {x: -0.08, y: 1.21, z: 2.92}
 --- !u!1 &503368360
 GameObject:
   m_ObjectHideFlags: 0
@@ -1887,6 +1894,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: -0.70141387, y: 0.011395454, z: -2.5357695}
+  FOV: 55
 --- !u!1 &573580306
 GameObject:
   m_ObjectHideFlags: 0
@@ -1989,6 +1997,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: -5.457321, y: 0.90463066, z: 7.0613422}
+  FOV: 55
 --- !u!1 &616004230
 GameObject:
   m_ObjectHideFlags: 0
@@ -2333,6 +2342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: -7.09048, y: 0.08984375, z: -8.197682}
+  FOV: 55
 --- !u!1 &644389552
 GameObject:
   m_ObjectHideFlags: 0
@@ -2490,7 +2500,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 676148386}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -2585,6 +2595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: -3.8650022, y: -0.065924644, z: -8.972935}
+  FOV: 55
 --- !u!1 &724795237
 GameObject:
   m_ObjectHideFlags: 0
@@ -2629,6 +2640,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: -0.92384434, y: 0.10834503, z: 2.2489371}
+  FOV: 55
 --- !u!1 &725252805
 GameObject:
   m_ObjectHideFlags: 0
@@ -2765,6 +2777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: 9.318492, y: -3.092413, z: 5.2776937}
+  FOV: 55
 --- !u!1 &732151979
 GameObject:
   m_ObjectHideFlags: 0
@@ -2993,6 +3006,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: 7.4574575, y: 0.25006795, z: 19.594303}
+  FOV: 55
 --- !u!1 &781340764
 GameObject:
   m_ObjectHideFlags: 0
@@ -3544,6 +3558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: -1.752558, y: 0, z: -2.823195}
+  FOV: 55
 --- !u!1 &882880832
 GameObject:
   m_ObjectHideFlags: 0
@@ -4176,6 +4191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: -0.9008837, y: -0.89928484, z: 0}
+  FOV: 55
 --- !u!1 &1087211575
 GameObject:
   m_ObjectHideFlags: 0
@@ -4220,6 +4236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: 7.4574575, y: 0.25006795, z: 16.307262}
+  FOV: 55
 --- !u!1 &1103865169
 GameObject:
   m_ObjectHideFlags: 0
@@ -4478,6 +4495,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: 6.705695, y: -0.7379856, z: 5.356896}
+  FOV: 55
 --- !u!1 &1140841708
 GameObject:
   m_ObjectHideFlags: 0
@@ -4614,6 +4632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: -2.1459289, y: 0.91654205, z: 8.906147}
+  FOV: 55
 --- !u!1 &1227871564
 GameObject:
   m_ObjectHideFlags: 0
@@ -5182,6 +5201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: 6.705695, y: -0.14661312, z: -0.27237475}
+  FOV: 55
 --- !u!1 &1348726025
 GameObject:
   m_ObjectHideFlags: 0
@@ -5318,6 +5338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: 16.07069, y: 0.54800665, z: 23.589539}
+  FOV: 55
 --- !u!1 &1383209547
 GameObject:
   m_ObjectHideFlags: 0
@@ -5604,6 +5625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: 14.533466, y: -0.3631884, z: 19.866217}
+  FOV: 55
 --- !u!1 &1453534545
 GameObject:
   m_ObjectHideFlags: 0
@@ -6057,7 +6079,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528558566}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.14, y: 0.95, z: 2.76}
+  m_LocalPosition: {x: -0.08, y: 0.95, z: 2.73}
   m_LocalScale: {x: -2.6624851, y: 4, z: 0.29999998}
   m_Children: []
   m_Father: {fileID: 488072428}
@@ -6307,6 +6329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: 7.4666796, y: -0.6926527, z: 24.00127}
+  FOV: 55
 --- !u!1 &1566759688
 GameObject:
   m_ObjectHideFlags: 0
@@ -6709,6 +6732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: 3.2916102, y: 0, z: 6.3046427}
+  FOV: 55
 --- !u!1 &1619618965
 GameObject:
   m_ObjectHideFlags: 0
@@ -7071,6 +7095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: -6.9368706, y: 0.90463066, z: 0.2554884}
+  FOV: 55
 --- !u!1 &1684749942
 GameObject:
   m_ObjectHideFlags: 0
@@ -7400,6 +7425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: 18.222923, y: -0.17816818, z: 19.420486}
+  FOV: 55
 --- !u!1 &1739546685
 GameObject:
   m_ObjectHideFlags: 0
@@ -7706,6 +7732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: 7.4574575, y: -0.6272154, z: 7.1730804}
+  FOV: 55
 --- !u!1 &1786253404
 GameObject:
   m_ObjectHideFlags: 0
@@ -7750,6 +7777,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: 6.705695, y: -0.7379856, z: -6.115392}
+  FOV: 55
 --- !u!1 &1816420730
 GameObject:
   m_ObjectHideFlags: 0
@@ -8123,7 +8151,7 @@ PrefabInstance:
     - target: {fileID: 7800795314734230072, guid: 5cce58bf030136749889ce070bf4b7dc,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.8
+      value: -4.16
       objectReference: {fileID: 0}
     - target: {fileID: 7800795314734230072, guid: 5cce58bf030136749889ce070bf4b7dc,
         type: 3}
@@ -8679,7 +8707,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1983696562}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 36.93, y: 3.2, z: 21.67}
+  m_LocalPosition: {x: 0.4, y: -33.7, z: 21.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8729,6 +8757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: 2.844493, y: 0.10834503, z: 23.742863}
+  FOV: 55
 --- !u!1 &2050848431
 GameObject:
   m_ObjectHideFlags: 0
@@ -9151,6 +9180,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7984460791409131913, guid: fa2e3257d5324184585e691efa5d6926,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1196188342882434078, guid: fa2e3257d5324184585e691efa5d6926,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9307,6 +9341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focalPoint: {x: 5.2143292, y: -0.17365074, z: 20.31218}
+  FOV: 55
 --- !u!1 &2129823056
 GameObject:
   m_ObjectHideFlags: 0

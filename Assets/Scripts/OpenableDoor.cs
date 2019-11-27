@@ -50,7 +50,7 @@ public class OpenableDoor : MonoBehaviour
     // Activate the Main function when Player enter the trigger area
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("hand"))
+        if (other.CompareTag("Player"))
         {
             enter = true;
         }
@@ -59,7 +59,7 @@ public class OpenableDoor : MonoBehaviour
     // Deactivate the Main function when Player exit the trigger area
     void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("hand"))
+        if (other.CompareTag("Player"))
         {
             enter = false;
         }
