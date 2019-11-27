@@ -56,6 +56,7 @@ public class Inventory : MonoBehaviour
             {
                 itemBackgroundImages[i].color = Color.blue;
                 itemBackgroundImages[i].enabled = true;
+
                 if (Input.GetKeyDown(KeyCode.Return)) {
                     items[i].GetComponent<ItemActionScript>().UseItem();
                 }

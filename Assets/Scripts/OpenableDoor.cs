@@ -8,6 +8,13 @@ public class OpenableDoor : MonoBehaviour
     public float doorOpenAngle = -90.0f; //Set either positive or negative number to open the door inwards or outwards
     public float openSpeed = 2.0f; //Increasing this value will make the door open faster
 
+
+    ///////////////////
+    public bool locked = false;
+    /// <summary>
+    /// if the player got the key and used the key, locked door will be opened with this boolean.
+    /// </summary>
+
     bool open = false;
     bool enter = false;
 
@@ -30,7 +37,7 @@ public class OpenableDoor : MonoBehaviour
         }
         transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, Mathf.LerpAngle(currentRotationAngle, defaultRotationAngle + (open ? doorOpenAngle : 0), openTime), transform.localEulerAngles.z);
 
-        if (Input.GetKeyDown(KeyCode.F) && enter)
+        if (Input.GetKeyDown(KeyCode.F) && enter && !locked)
         {
             open = !open;
             currentRotationAngle = transform.localEulerAngles.y;
@@ -50,8 +57,10 @@ public class OpenableDoor : MonoBehaviour
     // Activate the Main function when Player enter the trigger area
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log("approaching door");
         if (other.CompareTag("Player"))
         {
+
             enter = true;
         }
     }

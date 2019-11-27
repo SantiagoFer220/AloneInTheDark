@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class ItemActionScript : MonoBehaviour
 {
+    public GameObject doorObject;
+    public OpenableDoor myDoor;
     // Start is called before the first frame update
     void Start()
     {
-        
+        myDoor = doorObject.GetComponent<OpenableDoor>();
     }
 
     // Update is called once per frame
@@ -17,6 +19,7 @@ public class ItemActionScript : MonoBehaviour
     }
 
     public void UseItem() {
-        Debug.Log("Using the item!");
+        Debug.Log("Using the key!");
+        myDoor.locked = false;
     }
 }
