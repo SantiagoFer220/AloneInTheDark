@@ -36,19 +36,23 @@ public KeyCode RotateLeft;
     {
         if ( !inventoryObject.activeSelf)//if inventory is NOT enabled
         {
-            if (Input.GetKey(Forward)&&!Input.GetKey(RotateLeft) && !Input.GetKey(RotateRight)) {
+            if (Input.GetKey(Forward))//&&!Input.GetKey(RotateLeft) && !Input.GetKey(RotateRight)) 
+            {
                 this.transform.Translate(0f, 0f, moveSpeed * Time.deltaTime);
             }
 
-            if (Input.GetKey(Backward) && !Input.GetKey(RotateLeft) && !Input.GetKey(RotateRight)) {
+            if (Input.GetKey(Backward) )//&& !Input.GetKey(RotateLeft) && !Input.GetKey(RotateRight)) 
+        {
                 this.transform.Translate(0f, 0f, -moveSpeed * Time.deltaTime);
             }
 
-            if (Input.GetKey(RotateLeft)&& !Input.GetKey(Forward) && !Input.GetKey(Backward)) {
+            if (Input.GetKey(RotateLeft))//&& !Input.GetKey(Forward) && !Input.GetKey(Backward))
+        {
                 this.transform.Rotate(0f, -turnSpeed, 0f);
             }
 
-            if (Input.GetKey(RotateRight) && !Input.GetKey(Forward) && !Input.GetKey(Backward)) {
+            if (Input.GetKey(RotateRight))// && !Input.GetKey(Forward) && !Input.GetKey(Backward))
+    {
                 this.transform.Rotate(0f, turnSpeed, 0f);
             }
         }
