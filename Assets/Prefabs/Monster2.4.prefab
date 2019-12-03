@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 9031760473586215907}
   - component: {fileID: 7002174119241754110}
   - component: {fileID: 2657997173545870095}
-  - component: {fileID: 8100893639394054501}
   - component: {fileID: 5510119357673983773}
   - component: {fileID: 8240798922911205177}
+  - component: {fileID: 766657958949134310}
   m_Layer: 0
   m_Name: Monster2.4
   m_TagString: Untagged
@@ -111,20 +111,6 @@ MonoBehaviour:
   player: {fileID: 0}
   dist: 0
   movespeed: 1.3
---- !u!114 &8100893639394054501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4005947485175510320}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35eda9daf4fe746d1a31df8f378ce9fe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wall: {fileID: 0}
-  maxdist: 100
 --- !u!114 &5510119357673983773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -157,3 +143,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &766657958949134310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4005947485175510320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 491660fd136e5417599a1cecb05af0ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wall: {fileID: 0}
+  maxdist: 2

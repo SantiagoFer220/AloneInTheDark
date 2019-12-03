@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterDetect: MonoBehaviour
+public class MonsterDetectTwo : MonoBehaviour
 {
     public GameObject wall;
+   // public float movespeed;
     public float maxdist = 100f;
-   
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,25 +23,22 @@ public class MonsterDetect: MonoBehaviour
         if (Physics.Raycast(myRay, maxdist))
         {
             Debug.Log("hit!");
-            if (Physics.Raycast(myRay, maxdist))
-            {
-                float rand = Random.value;
-                if (rand < 0.5f)
-                {
-                    Debug.Log("turn");
-                    transform.Rotate(0,-90f,0);
-                }
-                else
-                {
-                    transform.Rotate(0, 90f, 0);
-                }
 
+            float rand = Random.value;
+            if (rand < 0.5f)
+            {
+                Debug.Log("turn");
+                transform.Rotate(0, -90f, 0);
             }
             else
             {
-                transform.Translate(0, 0, 0 * Time.deltaTime);
+                transform.Rotate(0, 90f, 0);
             }
         }
-
+        /*else
+        {
+            transform.Translate(0, 0, movespeed * Time.deltaTime);
+        }
+        */
     }
 }
