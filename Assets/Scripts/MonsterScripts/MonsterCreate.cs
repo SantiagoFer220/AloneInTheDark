@@ -35,15 +35,20 @@ public class MonsterCreate : MonoBehaviour
             timeleft = 30f;
             // 30 seconds, change as needed
             
-            if (spawn == true)
+            if (spawn == true && counter == 0)
             {
                 // spawn event, adds (1) to counter in hierarchy
                 MonsterMake(new Vector3());
                 Debug.Log("made!");
                 counter++;
                 spawn = false;
-
             }
+            else if(counter == 1)
+            {
+                spawn = false;
+                timeleft = 0;
+            }
+            
             
         }
     }
