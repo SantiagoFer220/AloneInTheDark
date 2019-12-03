@@ -43,10 +43,10 @@ public class MonsterCreate : MonoBehaviour
                 counter++;
                 spawn = false;
             }
-            else  if(counter == 1)
+            else if(counter == 1)
             {
                 spawn = false;
-                timeleft -= Time.deltaTime;
+                timeleft = 0;
             }
             
             

@@ -37,7 +37,7 @@ public class HealthSystem : MonoBehaviour
 
         if (isdead)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
             letplay = !letplay;
 
         }
