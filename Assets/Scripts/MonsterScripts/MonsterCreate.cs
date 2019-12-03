@@ -41,10 +41,12 @@ public class MonsterCreate : MonoBehaviour
                 MonsterMake(new Vector3());
                 Debug.Log("made!");
                 counter++;
+                spawn = false;
             }
-            else
+            else  if(counter == 1)
             {
                 spawn = false;
+                timeleft -= Time.deltaTime;
             }
             
             
