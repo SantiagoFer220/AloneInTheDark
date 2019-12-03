@@ -21,7 +21,7 @@ public class MonsterDeath : MonoBehaviour
 
         if (Physics.Raycast(myRay, maxdist))
         {
-            Debug.Log("hit!");
+           
         }
 
     }

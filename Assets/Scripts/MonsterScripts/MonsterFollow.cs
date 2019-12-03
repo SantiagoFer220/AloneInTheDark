@@ -31,14 +31,15 @@ public class MonsterFollow : MonoBehaviour
                 Vector3.MoveTowards(transform.position, player.transform.position, movespeed * Time.deltaTime);
         }
 
-        void OnTriggerStay(Collider collision)
+      /*  void OnTriggerStay(Collider collision)
         {
             Debug.Log(collision.gameObject.tag);
             if (collision.gameObject.tag == "player")
             {
+                Debug.Log("damage!");
                 player.GetComponent<HealthSystem>().Damage(1);
 
             }
-        }
+        }*/
     }
 }
