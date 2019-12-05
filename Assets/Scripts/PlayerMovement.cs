@@ -14,12 +14,6 @@ public class PlayerMovement : MonoBehaviour
     public KeyCode RotateLeft;
 
 
-    ////////PlayerDamage
-    public int hp;
-    public bool isdead;
-    public bool letplay;
-
-
     /////////////INVENTORY CRAP
     // //////////INVENTORY CRAP
     public GameObject inventoryObject;
@@ -65,43 +59,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        ////////Player Damage
-        int GetHP()
-        {
-            return hp;
-        }
-
-        void HurtPlayer(int amount)
-        {
-            hp -= amount;
-
-            if (hp <= 0)
-            {
-                Debug.Log("Im dead!");
-                isdead = true;
-            }
-
-            if (isdead)
-            {
-                //Destroy(gameObject);
-                //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                letplay = !letplay;
-            }
-        }
-
-
-        void OnCollisionEnter(Collider collision)
-            {
-                if (collision.gameObject.tag == "monster")
-                {
-                    Debug.Log("ouch");
-                    HealthSystem2 monster = collision.GetComponent<HealthSystem2>();
-
-                    HurtPlayer(monster.strength);
-                }
-            }
         
-
 //////////////////INVENTORY CRAP
 //////////////////INVENTORY CRAP
 //////////////////INVENTORY CRAP
