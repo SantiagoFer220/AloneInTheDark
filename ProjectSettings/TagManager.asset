@@ -9,6 +9,7 @@ TagManager:
   - pos2
   - hand
   - walls
+  - monster
   layers:
   - Default
   - TransparentFX
