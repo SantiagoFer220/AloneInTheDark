@@ -38,6 +38,7 @@ public class HealthSystem : MonoBehaviour
         if (isdead)
         {
             //Destroy(gameObject);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             letplay = !letplay;
 
         }
