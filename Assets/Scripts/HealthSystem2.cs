@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class HealthSystem2 : MonoBehaviour
 {
     public int hp;
-    public int strength;
     public bool isdead;
     public bool letplay;
     // Start is called before the first frame update
@@ -21,28 +20,29 @@ public class HealthSystem2 : MonoBehaviour
      
     }
     
-    void OnCollisionStay(Collision collision)
+    void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "monster")
         {
-            void HurtPlayer(int amount)
-            {
-                hp -= amount;
-               amount = strength - hp;
-                Debug.Log("health left:"+ hp);
-                if (hp <= 0)
-                {
-                    Debug.Log("Im dead!");
-                    isdead = true;
-                }
+          HurtPlayer(2);
+        }
+    }
+    void HurtPlayer(int amount)
+    {
+        hp -= amount;
+        Debug.Log("health left:"+ hp);
+        if (hp <= 0)
+        {
+            Debug.Log("Im dead!");
+            isdead = true;
+        }
 
-                if (isdead)
-                {
-                    //Destroy(gameObject);
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-                    letplay = !letplay;
-                }
-            }
+        if (isdead)
+        {
+            //Destroy(gameObject);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            letplay = !letplay;
         }
     }
 }
+
