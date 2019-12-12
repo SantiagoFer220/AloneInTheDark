@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/AloneInTheDark.unity
+    guid: 50c0e74a7e6f14c0fb8e1f72cfee79ab
   m_configObjects: {}
