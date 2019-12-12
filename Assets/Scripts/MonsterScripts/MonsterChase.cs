@@ -12,10 +12,16 @@ public class MonsterChase : MonoBehaviour
 
     [SerializeField] EnemyStates currentState;
 
+    bool attacking = false;
+    public Vector3 offset;
+
+
+
     enum EnemyStates
     {
         Patrolling,
-        Chasing
+        Chasing,
+        StopChase,
 
     }
 
@@ -37,6 +43,7 @@ public class MonsterChase : MonoBehaviour
             currentState = EnemyStates.Chasing;
         }
 
+
         if (currentState == EnemyStates.Patrolling)
         {
             if (Vector3.Distance(transform.position, waypoints[_currentWaypoint].position) < 0.6f)
@@ -50,22 +57,56 @@ public class MonsterChase : MonoBehaviour
 
             _agent.SetDestination(waypoints[_currentWaypoint].position);
         }
+
+        if (attacking == true)
+        {
+            Debug.Log("Attack");
+            currentState = EnemyStates.StopChase;
+            
+        }
+        else if (Vector3.Distance(transform.position, waypoints[_currentWaypoint].position) < 0.6f)
+        {
+            currentState = EnemyStates.Patrolling;
+        }
+        else if (Vector3.Distance(transform.position, objectToChase.position) > 10f)
+        {
+            currentState = EnemyStates.Chasing;
+        }
+
+        if (currentState == EnemyStates.StopChase)
+        {
+
+            _agent.speed = 0;
+            _agent.acceleration = 0;
+
+        }
+        else
+        {
+            _agent.speed = 1.5f;
+            _agent.acceleration = 2f;
+        }
+
     }
+
+
 
     void SetDestination()
     {
         if (currentState == EnemyStates.Chasing) _agent.SetDestination(objectToChase.position);
     }
 
-//what happens when the mnster catches yhe pleyer
-    private void OnCollisionEnter(Collision collision)
+    //what happens when the mnster catches yhe pleyer
+    private void OnTriggerEnter(Collider collision)
     {
         if (collision.transform.name == "Player")
         {
 
+            attacking = true;
             //Heres where health/death will go for monster
             // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
+
 }
+
       
